@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore available event venues across all UCF campuses">
+    <title>Venues | UCF Event Planners Guidelines</title>
+    <link rel="icon" type="image/png" href="assets/images/ucf-tab-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/interactive.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="assets/images/ucf-logo.png" alt="UCF Logo" class="ucf-logo">
+                <h1 class="site-title">Event Planners Guidelines</h1>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="conflict-management.html" class="nav-link">Conflict Management</a></li>
+                    <li><a href="budgeting.html" class="nav-link">Budgeting</a></li>
+                    <li><a href="venues.html" class="nav-link active">Venues</a></li>
+                    <li><a href="parking-transportation.html" class="nav-link">Parking & Transport</a></li>
+                    <li><a href="security.html" class="nav-link">Security</a></li>
+                    <li><a href="catering.html" class="nav-link">Catering</a></li>
+                    <li><a href="event-permits.html" class="nav-link">Event Permits</a></li>
+                    <li><a href="lodging.html" class="nav-link">Lodging</a></li>
+                    <li><a href="marketing.html" class="nav-link">Marketing</a></li>
+                </ul>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+        <div class="search-container">
+            <input type="text" id="global-search" class="search-input" placeholder="Search guidelines...">
+            <button id="search-btn" class="search-btn">Search</button>
+            <div id="search-results" class="search-results hidden"></div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="page-header fade-in">
+            <div class="container">
+                <h1 class="page-title">Event Venues</h1>
+                <p class="page-subtitle">Discover available event spaces across all UCF campuses</p>
+            </div>
+        </section>
+
+        <section class="content-section slide-up">
+            <div class="container">
+                <!-- Main Campus Venues -->
+                <div class="campus-section">
+                    <h2 class="campus-title">UCF Main Campus</h2>
+
+                    <div class="venue-card">
+                        <div class="venue-header">
+                            <h3>Addition Financial Arena</h3>
+                            <span class="venue-badge">Large Events</span>
+                        </div>
+                        <div class="venue-content">
+                            <p>Addition Financial Arena offers multiple event spaces perfect for large-scale events, conferences, and special occasions.</p>
+                            <div class="venue-spaces">
+                                <span class="space-tag">The Arena</span>
+                                <span class="space-tag">The Venue</span>
+                                <span class="space-tag">The Cypress Room</span>
+                            </div>
+                            <div class="venue-features">
+                                <ul>
+                                    <li>Flexible seating configurations</li>
+                                    <li>Professional A/V equipment</li>
+                                    <li>Dedicated event support staff</li>
+                                    <li>On-site parking available</li>
+                                </ul>
+                            </div>
+                            <a href="https://www.additionfiarena.com/host-an-event" target="_blank" class="btn btn-gold">View Venue Details</a>
+                        </div>
+                    </div>
+
+                    <div class="venue-card">
+                        <div class="venue-header">
+                            <h3>UCF Student Union</h3>
+                            <span class="venue-badge">All Event Sizes</span>
+                        </div>
+                        <div class="venue-content">
+                            <p>The Student Union provides a variety of spaces for events ranging from small meetings to large gatherings.</p>
+                            <div class="venue-spaces">
+                                <span class="space-tag">Ballrooms</span>
+                                <span class="space-tag">Meeting Rooms</span>
+                                <span class="space-tag">Charge On Chambers</span>
+                                <span class="space-tag">Live Oak Center</span>
+                            </div>
+                            <div class="venue-features">
+                                <ul>
+                                    <li>Central campus location</li>
+                                    <li>Multiple room configurations</li>
+                                    <li>Built-in A/V capabilities</li>
+                                    <li>Catering options available</li>
+                                </ul>
+                            </div>
+                            <a href="https://studentunion.ucf.edu/reservations/" target="_blank" class="btn btn-gold">Reserve Space</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Downtown Campus Venues -->
+                <div class="campus-section">
+                    <h2 class="campus-title">UCF Downtown Campus</h2>
+
+                    <div class="venue-card">
+                        <div class="venue-header">
+                            <h3>Downtown Campus Event Spaces</h3>
+                            <span class="venue-badge">Urban Setting</span>
+                        </div>
+                        <div class="venue-content">
+                            <p>The Downtown Campus offers modern event spaces in the heart of Orlando, perfect for professional events and community engagement.</p>
+                            <div class="venue-features">
+                                <ul>
+                                    <li>Downtown Orlando location</li>
+                                    <li>Modern facilities and technology</li>
+                                    <li>Easy access to public transportation</li>
+                                    <li>Nearby parking garages</li>
+                                </ul>
+                            </div>
+                            <a href="https://www.ucf.edu/downtown/wp-content/blogs.dir/21/files/2021/08/2021_DT-Reservation-Guide_F-web.pdf" target="_blank" class="btn btn-gold">View Reservation Guide</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lake Nona Campus Venues -->
+                <div class="campus-section">
+                    <h2 class="campus-title">UCF Lake Nona Campus</h2>
+
+                    <div class="venue-card">
+                        <div class="venue-header">
+                            <h3>Lake Nona Campus Event Spaces</h3>
+                            <span class="venue-badge">Medical Campus</span>
+                        </div>
+                        <div class="venue-content">
+                            <p>The Lake Nona Medical Campus provides event spaces ideal for medical, health, and scientific conferences and gatherings.</p>
+                            <div class="venue-features">
+                                <ul>
+                                    <li>State-of-the-art medical facilities</li>
+                                    <li>Professional conference rooms</li>
+                                    <li>Advanced presentation technology</li>
+                                    <li>Lake Nona Medical City location</li>
+                                </ul>
+                            </div>
+                            <a href="https://med.ucf.edu/student-affairs/student-services/student-organizations-student-events/purchase-request-form-prf/" target="_blank" class="btn btn-gold">Event Planning Information</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rosen Campus Venues -->
+                <div class="campus-section">
+                    <h2 class="campus-title">UCF Rosen College of Hospitality Management</h2>
+
+                    <div class="venue-card">
+                        <div class="venue-header">
+                            <h3>Rosen Campus Event Facilities</h3>
+                            <span class="venue-badge">Hospitality Focused</span>
+                        </div>
+                        <div class="venue-content">
+                            <p>Rosen College offers premier event spaces with hospitality industry expertise, perfect for conferences, banquets, and special events.</p>
+                            <div class="venue-features">
+                                <ul>
+                                    <li>Hospitality-focused facilities</li>
+                                    <li>Professional event management support</li>
+                                    <li>Full catering and banquet services</li>
+                                    <li>Located in Orlando's tourism corridor</li>
+                                </ul>
+                            </div>
+                            <a href="https://hospitality.ucf.edu/about/event-planning/" target="_blank" class="btn btn-gold">Plan Your Event</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Venue Selection Guide -->
+                <div class="selection-guide">
+                    <h2 class="section-title">Venue Selection Guide</h2>
+
+                    <div class="guide-content">
+                        <h3>Choosing the Right Venue</h3>
+                        <p>Consider these factors when selecting your event venue:</p>
+
+                        <div class="factors-grid">
+                            <div class="factor-card">
+                                <h4>Capacity</h4>
+                                <p>Ensure the venue can comfortably accommodate your expected number of attendees with appropriate seating arrangements.</p>
+                            </div>
+
+                            <div class="factor-card">
+                                <h4>Location</h4>
+                                <p>Choose a campus location convenient for your target audience. Consider parking, accessibility, and transportation options.</p>
+                            </div>
+
+                            <div class="factor-card">
+                                <h4>Amenities</h4>
+                                <p>Verify the venue has necessary equipment (A/V, WiFi, microphones) or determine if rentals are needed.</p>
+                            </div>
+
+                            <div class="factor-card">
+                                <h4>Budget</h4>
+                                <p>Compare venue rental fees, setup costs, and any additional charges. Some campus venues offer discounts for student organizations.</p>
+                            </div>
+
+                            <div class="factor-card">
+                                <h4>Availability</h4>
+                                <p>Book early to secure your preferred date. Popular venues fill up quickly, especially during peak academic periods.</p>
+                            </div>
+
+                            <div class="factor-card">
+                                <h4>Setup Requirements</h4>
+                                <p>Consider load-in/load-out times, setup configurations, and whether the venue allows decorations or modifications.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Flowchart -->
+                <div class="flowchart-section">
+                    <h2 class="section-title">Venue Selection Flowchart</h2>
+                    <p>Use this interactive guide to find the right venue for your event type and size.</p>
+                    <div id="venue-flowchart" class="flowchart-container">
+                        <!-- Flowchart will be rendered by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>UCF Event Planning</h3>
+                <p>Comprehensive guidelines for planning successful events at the University of Central Florida</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="https://www.ucf.edu/" target="_blank">UCF Home</a></li>
+                    <li><a href="https://events.ucf.edu/" target="_blank">Campus Events</a></li>
+                    <li><a href="https://ucfknights.com/all-sports-schedule" target="_blank">Athletics Calendar</a></li>
+                    <li><a href="https://www.ucf.edu/brand/" target="_blank">Brand Standards</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul class="footer-links">
+                    <li><a href="https://parking.ucf.edu/" target="_blank">Parking Services</a></li>
+                    <li><a href="https://police.ucf.edu/" target="_blank">UCF Police</a></li>
+                    <li><a href="https://risk.ucf.edu/event-safety/" target="_blank">Event Safety</a></li>
+                    <li><a href="https://ucf.mydininghub.com/en/catering" target="_blank">Catering Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>For questions about event planning at UCF, contact your department or college event coordinator.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 University of Central Florida. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/flowchart.js"></script>
+</body>
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plan catering for your UCF event with our interactive menu builder">
+    <title>Catering | UCF Event Planners Guidelines</title>
+    <link rel="icon" type="image/png" href="assets/images/ucf-tab-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/interactive.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="assets/images/ucf-logo.png" alt="UCF Logo" class="ucf-logo">
+                <h1 class="site-title">Event Planners Guidelines</h1>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="conflict-management.html" class="nav-link">Conflict Management</a></li>
+                    <li><a href="budgeting.html" class="nav-link">Budgeting</a></li>
+                    <li><a href="venues.html" class="nav-link">Venues</a></li>
+                    <li><a href="parking-transportation.html" class="nav-link">Parking & Transport</a></li>
+                    <li><a href="security.html" class="nav-link">Security</a></li>
+                    <li><a href="catering.html" class="nav-link active">Catering</a></li>
+                    <li><a href="event-permits.html" class="nav-link">Event Permits</a></li>
+                    <li><a href="lodging.html" class="nav-link">Lodging</a></li>
+                    <li><a href="marketing.html" class="nav-link">Marketing</a></li>
+                </ul>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+        <div class="search-container">
+            <input type="text" id="global-search" class="search-input" placeholder="Search guidelines...">
+            <button id="search-btn" class="search-btn">Search</button>
+            <div id="search-results" class="search-results hidden"></div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="page-header fade-in">
+            <div class="container">
+                <h1 class="page-title">Catering Services</h1>
+                <p class="page-subtitle">Plan your event menu with UCF Dining Services and our interactive catering builder</p>
+            </div>
+        </section>
+
+        <section class="content-section slide-up">
+            <div class="container">
+                <div class="intro-box">
+                    <h2>UCF Catering Services</h2>
+                    <p>UCF Dining Services provides professional catering for events on the Main Campus. From small meetings to large banquets, UCF Catering can customize menus to fit your event needs and budget.</p>
+                </div>
+
+                <!-- UCF Dining Catering Link -->
+                <div class="resource-section">
+                    <div class="resource-card-list">
+                        <div class="resource-item">
+                            <div class="resource-icon">🍽️</div>
+                            <div class="resource-content">
+                                <h3>UCF Dining Services Catering Menus</h3>
+                                <p>Explore complete catering menus from UCF Dining Services. View options for breakfast, lunch, dinner, hors d'oeuvres, beverages, and desserts.</p>
+                                <a href="https://ucf.mydininghub.com/en/catering" target="_blank" class="btn btn-gold">View Catering Menus</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>Available for Main Campus Only</h3>
+                        <p>UCF Dining Services catering is available for events on the Main Campus. For catering at other campus locations (Downtown, Lake Nona, Rosen), contact local catering vendors or check with your campus facility coordinator for recommendations.</p>
+                    </div>
+                </div>
+
+                <!-- Interactive Catering Menu Builder -->
+                <div class="catering-builder-section">
+                    <h2 class="section-title">Interactive Catering Menu Builder</h2>
+                    <p class="builder-intro">Build your custom catering menu and estimate costs for your event. Export your selections to Excel for easy ordering and budgeting.</p>
+
+                    <div id="catering-builder" class="catering-builder">
+                        <!-- Event Details -->
+                        <div class="builder-section">
+                            <h3>Event Details</h3>
+                            <div class="form-row">
+                                <label for="catering-event-name">Event Name:</label>
+                                <input type="text" id="catering-event-name" placeholder="Enter event name">
+                            </div>
+                            <div class="form-row">
+                                <label for="guest-count">Number of Guests:</label>
+                                <input type="number" id="guest-count" placeholder="0" min="1">
+                            </div>
+                            <div class="form-row">
+                                <label for="meal-type">Meal Type:</label>
+                                <select id="meal-type">
+                                    <option value="">Select meal type</option>
+                                    <option value="breakfast">Breakfast</option>
+                                    <option value="lunch">Lunch</option>
+                                    <option value="dinner">Dinner</option>
+                                    <option value="reception">Reception/Appetizers</option>
+                                    <option value="snacks">Snacks/Breaks</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Menu Categories -->
+                        <div class="builder-section">
+                            <h3>Build Your Menu</h3>
+
+                            <!-- Breakfast Items -->
+                            <div class="menu-category" id="breakfast-category">
+                                <h4>Breakfast Items</h4>
+                                <div class="menu-items">
+                                    <div class="menu-item">
+                                        <input type="checkbox" id="item-continental" class="menu-checkbox" data-category="breakfast" data-price="8.50">
+                                        <label for="item-continental">Continental Breakfast - $8.50/person</label>
+                                    </div>
+                                    <div class="menu-item">
+                                        <input type="checkbox" id="item-hot-breakfast" class="menu-checkbox" data-category="breakfast" data-price="12.00">
+                                        <label for="item-hot-breakfast">Hot Breakfast Buffet - $12.00/person</label>
+                                    </div>
+                                    <div class="menu-item">
+                                        <input type="checkbox" id="item-pastries" class="menu-checkbox" data-category="breakfast" data-price="3.50">
+                                        <label for="item-pastries">Assorted Pastries - $3.50/person</label>
+                                    </div>
+                                    <div class="menu-item">
+                                        <input type="checkbox" id="item-fruit" class="menu-checkbox" data-category="breakfast" data-price="4.00">
+                                        <label for="item-fruit">Fresh Fruit Platter - $4.00/person</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Lunch Items -->
+                            <div class="menu-category" id="lunch-category">
+                                <h4>Lunch Items</h4>
+                                <div class="menu-items">
+                                    <div class="menu-item">
+                                        <input type="checkbox" id="item-sandwich" class="menu-checkbox" data-category="lunch" data-price="11.00">
+                                        <label for="item-sandwich">Sandwich Platter - $11.00/person</label>
+                                    </div>
+                                    <div class="menu-item">
+                                        <input type="checkbox" id="item-salad-bar" class="menu-checkbox" data-category="lunch" data-price="13.50">
+                                        <label for="item-salad-bar">Salad Bar - $13.50/person</label>
+                                    </div>
+                                    <div class="menu-item">
+                                        <input type="checkbox" id="item-hot-lunch" class="menu-checkbox" data-category="lunch" data-price="16.00">
+                                        <label for="item-hot-lunch">Hot Lunch Buffet - $16.00/person</label>
+                                    </div>
+                                    <div class="menu-item">
+                                        <input type="checkbox" id="item-boxed-lunch" class="menu-checkbox" data-category="lunch" data-price="10.00">
+                                        <label for="item-boxed-lunch">Boxed Lunch - $10.00/person</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Dinner Items -->
+                            <div class="menu-category" id="dinner-category">
+                                <h4>Dinner Items</h4>
+                                <div class="menu-items">
+                                    <div class="menu-item">
+                                        <input type="checkbox" id="item-plated-dinner" class="menu-checkbox" data-category="dinner" data-price="25.00">
+                                        <label for="item-plated-dinner">Plated Dinner - $25.00/person</label>
+                                    </div>
+                                    <div class="menu-item">
+                                        <input type="checkbox" id="item-buffet-dinner" class="menu-checkbox" data-category="dinner" data-price="22.00">
+                                        <label for="item-buffet-dinner">Buffet Dinner - $22.00/person</label>
+                                    </div>
+                                    <div class="menu-item">
+                                        <input type="checkbox" id="item-carving-station" class="menu-checkbox" data-category="dinner" data-price="18.00">
+                                        <label for="item-carving-station">Carving Station - $18.00/person</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Appetizers & Hors d'oeuvres -->
+                            <div class="menu-category" id="appetizers-category">
+                                <h4>Appetizers & Hors d'oeuvres</h4>
+                                <div class="menu-items">
+                                    <div class="menu-item">
+                                        <input type="checkbox" id="item-cheese-platter" class="menu-checkbox" data-category="appetizers" data-price="6.00">
+                                        <label for="item-cheese-platter">Cheese & Crackers Platter - $6.00/person</label>
+                                    </div>
+                                    <div class="menu-item">
+                                        <input type="checkbox" id="item-veggie-platter" class="menu-checkbox" data-category="appetizers" data-price="5.00">
+                                        <label for="item-veggie-platter">Vegetable Platter with Dip - $5.00/person</label>
+                                    </div>
+                                    <div class="menu-item">
+                                        <input type="checkbox" id="item-hot-apps" class="menu-checkbox" data-category="appetizers" data-price="8.50">
+                                        <label for="item-hot-apps">Assorted Hot Appetizers - $8.50/person</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Beverages -->
+                            <div class="menu-category" id="beverages-category">
+                                <h4>Beverages</h4>
+                                <div class="menu-items">
+                                    <div class="menu-item">
+                                        <input type="checkbox" id="item-coffee" class="menu-checkbox" data-category="beverages" data-price="2.50">
+                                        <label for="item-coffee">Coffee Service - $2.50/person</label>
+                                    </div>
+                                    <div class="menu-item">
+                                        <input type="checkbox" id="item-soft-drinks" class="menu-checkbox" data-category="beverages" data-price="2.00">
+                                        <label for="item-soft-drinks">Soft Drinks - $2.00/person</label>
+                                    </div>
+                                    <div class="menu-item">
+                                        <input type="checkbox" id="item-juice" class="menu-checkbox" data-category="beverages" data-price="2.25">
+                                        <label for="item-juice">Juice Selection - $2.25/person</label>
+                                    </div>
+                                    <div class="menu-item">
+                                        <input type="checkbox" id="item-water" class="menu-checkbox" data-category="beverages" data-price="1.50">
+                                        <label for="item-water">Bottled Water - $1.50/person</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Desserts -->
+                            <div class="menu-category" id="desserts-category">
+                                <h4>Desserts</h4>
+                                <div class="menu-items">
+                                    <div class="menu-item">
+                                        <input type="checkbox" id="item-cookies" class="menu-checkbox" data-category="desserts" data-price="3.00">
+                                        <label for="item-cookies">Assorted Cookies - $3.00/person</label>
+                                    </div>
+                                    <div class="menu-item">
+                                        <input type="checkbox" id="item-brownies" class="menu-checkbox" data-category="desserts" data-price="3.50">
+                                        <label for="item-brownies">Brownies & Bars - $3.50/person</label>
+                                    </div>
+                                    <div class="menu-item">
+                                        <input type="checkbox" id="item-cake" class="menu-checkbox" data-category="desserts" data-price="5.00">
+                                        <label for="item-cake">Sheet Cake - $5.00/person</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Catering Summary -->
+                        <div class="catering-summary">
+                            <h3>Catering Summary</h3>
+                            <div class="summary-details">
+                                <div class="summary-row">
+                                    <span class="summary-label">Number of Guests:</span>
+                                    <span id="summary-guests" class="summary-value">0</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span class="summary-label">Items Selected:</span>
+                                    <span id="summary-items" class="summary-value">0</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span class="summary-label">Cost Per Person:</span>
+                                    <span id="summary-per-person" class="summary-value">$0.00</span>
+                                </div>
+                                <div class="summary-row total-row">
+                                    <span class="summary-label">Total Estimated Cost:</span>
+                                    <span id="summary-total" class="summary-value">$0.00</span>
+                                </div>
+                            </div>
+
+                            <div class="builder-actions">
+                                <button id="export-catering-excel" class="btn btn-primary">Export to Excel</button>
+                                <button id="clear-catering" class="btn btn-outline">Clear Selections</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Best Practices Section -->
+                <div class="best-practices-section">
+                    <h2 class="section-title">Catering Best Practices</h2>
+
+                    <div class="practices-grid">
+                        <div class="practice-card">
+                            <h3>Order in Advance</h3>
+                            <p>Place catering orders at least 2 weeks in advance for small events and 4-6 weeks for large events or complex menus. This ensures availability and proper planning.</p>
+                        </div>
+
+                        <div class="practice-card">
+                            <h3>Accurate Guest Count</h3>
+                            <p>Provide the most accurate guest count possible. Plan for 5-10% overage to ensure adequate food. Confirm final numbers 3-5 days before the event.</p>
+                        </div>
+
+                        <div class="practice-card">
+                            <h3>Dietary Restrictions</h3>
+                            <p>Collect information about dietary restrictions and allergies in advance. Provide vegetarian, vegan, and gluten-free options when possible.</p>
+                        </div>
+
+                        <div class="practice-card">
+                            <h3>Consider Event Timing</h3>
+                            <p>Match your menu to the event time and duration. Morning events need breakfast items, while afternoon meetings may only require snacks and beverages.</p>
+                        </div>
+
+                        <div class="practice-card">
+                            <h3>Budget Appropriately</h3>
+                            <p>Allocate 20-35% of your event budget for food and beverages. Consider cost per person and total attendees when selecting menu items.</p>
+                        </div>
+
+                        <div class="practice-card">
+                            <h3>Setup and Cleanup</h3>
+                            <p>Coordinate with catering staff on setup time, service style (buffet vs. plated), and cleanup procedures. Ensure venue is accessible for delivery.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dietary Accommodations -->
+                <div class="dietary-section">
+                    <h2 class="section-title">Dietary Accommodations</h2>
+
+                    <div class="dietary-content">
+                        <p>UCF Dining Services can accommodate various dietary needs and preferences. When planning your menu, consider these common dietary restrictions:</p>
+
+                        <div class="dietary-grid">
+                            <div class="dietary-card">
+                                <h4>Vegetarian</h4>
+                                <p>Meals without meat, poultry, or fish. Include plenty of vegetable-based options.</p>
+                            </div>
+
+                            <div class="dietary-card">
+                                <h4>Vegan</h4>
+                                <p>No animal products including dairy, eggs, or honey. Request plant-based alternatives.</p>
+                            </div>
+
+                            <div class="dietary-card">
+                                <h4>Gluten-Free</h4>
+                                <p>Free from wheat, barley, rye, and gluten-containing grains. Label items clearly.</p>
+                            </div>
+
+                            <div class="dietary-card">
+                                <h4>Kosher/Halal</h4>
+                                <p>Following religious dietary laws. Discuss requirements with catering coordinator.</p>
+                            </div>
+
+                            <div class="dietary-card">
+                                <h4>Allergies</h4>
+                                <p>Common allergens include nuts, dairy, shellfish, soy. Always label potential allergens.</p>
+                            </div>
+
+                            <div class="dietary-card">
+                                <h4>Other Restrictions</h4>
+                                <p>Lactose-free, low-sodium, diabetic-friendly options available upon request.</p>
+                            </div>
+                        </div>
+
+                        <div class="info-box">
+                            <h3>Important Note</h3>
+                            <p>Always communicate dietary restrictions to your catering provider in advance. Consider creating separate labeled sections for special dietary items at your event to prevent cross-contamination.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Catering Checklist -->
+                <div class="catering-checklist">
+                    <h2 class="section-title">Catering Planning Checklist</h2>
+
+                    <div class="checklist-box">
+                        <ul class="checklist">
+                            <li>☐ Determine expected number of guests</li>
+                            <li>☐ Set catering budget</li>
+                            <li>☐ Identify event meal type (breakfast, lunch, dinner, reception)</li>
+                            <li>☐ Collect dietary restriction information from attendees</li>
+                            <li>☐ Review UCF Dining Services catering menus</li>
+                            <li>☐ Select menu items appropriate for event type and timing</li>
+                            <li>☐ Include vegetarian/vegan options</li>
+                            <li>☐ Plan for dietary restrictions and allergies</li>
+                            <li>☐ Calculate total costs with 10% overage</li>
+                            <li>☐ Submit catering order 2-6 weeks in advance</li>
+                            <li>☐ Confirm venue allows outside catering (if using non-UCF vendor)</li>
+                            <li>☐ Arrange for tables, linens, and serving equipment</li>
+                            <li>☐ Coordinate delivery time and location</li>
+                            <li>☐ Confirm setup and service style</li>
+                            <li>☐ Provide final guest count 3-5 days before event</li>
+                            <li>☐ Arrange for cleanup and disposal</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>UCF Event Planning</h3>
+                <p>Comprehensive guidelines for planning successful events at the University of Central Florida</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="https://www.ucf.edu/" target="_blank">UCF Home</a></li>
+                    <li><a href="https://events.ucf.edu/" target="_blank">Campus Events</a></li>
+                    <li><a href="https://ucfknights.com/all-sports-schedule" target="_blank">Athletics Calendar</a></li>
+                    <li><a href="https://www.ucf.edu/brand/" target="_blank">Brand Standards</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul class="footer-links">
+                    <li><a href="https://parking.ucf.edu/" target="_blank">Parking Services</a></li>
+                    <li><a href="https://police.ucf.edu/" target="_blank">UCF Police</a></li>
+                    <li><a href="https://risk.ucf.edu/event-safety/" target="_blank">Event Safety</a></li>
+                    <li><a href="https://ucf.mydininghub.com/en/catering" target="_blank">Catering Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>For questions about event planning at UCF, contact your department or college event coordinator.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 University of Central Florida. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/catering-builder.js"></script>
+</body>
+</html>

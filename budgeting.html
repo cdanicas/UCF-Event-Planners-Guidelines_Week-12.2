@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plan your UCF event budget with our interactive calculator">
+    <title>Budgeting | UCF Event Planners Guidelines</title>
+    <link rel="icon" type="image/png" href="assets/images/ucf-tab-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/interactive.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="assets/images/ucf-logo.png" alt="UCF Logo" class="ucf-logo">
+                <h1 class="site-title">Event Planners Guidelines</h1>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="conflict-management.html" class="nav-link">Conflict Management</a></li>
+                    <li><a href="budgeting.html" class="nav-link active">Budgeting</a></li>
+                    <li><a href="venues.html" class="nav-link">Venues</a></li>
+                    <li><a href="parking-transportation.html" class="nav-link">Parking & Transport</a></li>
+                    <li><a href="security.html" class="nav-link">Security</a></li>
+                    <li><a href="catering.html" class="nav-link">Catering</a></li>
+                    <li><a href="event-permits.html" class="nav-link">Event Permits</a></li>
+                    <li><a href="lodging.html" class="nav-link">Lodging</a></li>
+                    <li><a href="marketing.html" class="nav-link">Marketing</a></li>
+                </ul>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+        <div class="search-container">
+            <input type="text" id="global-search" class="search-input" placeholder="Search guidelines...">
+            <button id="search-btn" class="search-btn">Search</button>
+            <div id="search-results" class="search-results hidden"></div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="page-header fade-in">
+            <div class="container">
+                <h1 class="page-title">Event Budgeting</h1>
+                <p class="page-subtitle">Plan and track your event budget with our interactive calculator and best practices guide</p>
+            </div>
+        </section>
+
+        <!-- Budget Calculator Section -->
+        <section class="content-section slide-up">
+            <div class="container">
+                <div class="calculator-container">
+                    <h2 class="section-title">Interactive Budget Calculator</h2>
+                    <p class="calculator-intro">Use this calculator to estimate costs for your UCF event. Fill in the fields below and export your budget to Excel.</p>
+
+                    <div id="budget-calculator" class="budget-calculator">
+                        <div class="calculator-form">
+                            <!-- Event Details -->
+                            <div class="form-section">
+                                <h3>Event Details</h3>
+                                <div class="form-row">
+                                    <label for="event-name">Event Name:</label>
+                                    <input type="text" id="event-name" placeholder="Enter event name">
+                                </div>
+                                <div class="form-row">
+                                    <label for="event-date">Event Date:</label>
+                                    <input type="date" id="event-date">
+                                </div>
+                                <div class="form-row">
+                                    <label for="expected-attendees">Expected Attendees:</label>
+                                    <input type="number" id="expected-attendees" placeholder="0" min="0">
+                                </div>
+                            </div>
+
+                            <!-- Budget Categories -->
+                            <div class="form-section">
+                                <h3>Budget Categories</h3>
+
+                                <div class="budget-category">
+                                    <h4>Venue Costs</h4>
+                                    <div class="form-row">
+                                        <label for="venue-rental">Venue Rental Fee:</label>
+                                        <input type="number" id="venue-rental" class="budget-input" placeholder="0.00" min="0" step="0.01">
+                                    </div>
+                                    <div class="form-row">
+                                        <label for="venue-setup">Setup/Cleanup Fees:</label>
+                                        <input type="number" id="venue-setup" class="budget-input" placeholder="0.00" min="0" step="0.01">
+                                    </div>
+                                </div>
+
+                                <div class="budget-category">
+                                    <h4>Catering Costs</h4>
+                                    <div class="form-row">
+                                        <label for="catering-food">Food & Beverages:</label>
+                                        <input type="number" id="catering-food" class="budget-input" placeholder="0.00" min="0" step="0.01">
+                                    </div>
+                                    <div class="form-row">
+                                        <label for="catering-service">Service Fees:</label>
+                                        <input type="number" id="catering-service" class="budget-input" placeholder="0.00" min="0" step="0.01">
+                                    </div>
+                                </div>
+
+                                <div class="budget-category">
+                                    <h4>Security</h4>
+                                    <div class="form-row">
+                                        <label for="security-cost">Security Personnel:</label>
+                                        <input type="number" id="security-cost" class="budget-input" placeholder="0.00" min="0" step="0.01">
+                                    </div>
+                                </div>
+
+                                <div class="budget-category">
+                                    <h4>Marketing & Promotion</h4>
+                                    <div class="form-row">
+                                        <label for="marketing-printing">Printing (flyers, posters):</label>
+                                        <input type="number" id="marketing-printing" class="budget-input" placeholder="0.00" min="0" step="0.01">
+                                    </div>
+                                    <div class="form-row">
+                                        <label for="marketing-digital">Digital Marketing:</label>
+                                        <input type="number" id="marketing-digital" class="budget-input" placeholder="0.00" min="0" step="0.01">
+                                    </div>
+                                </div>
+
+                                <div class="budget-category">
+                                    <h4>Equipment & Supplies</h4>
+                                    <div class="form-row">
+                                        <label for="equipment-av">A/V Equipment:</label>
+                                        <input type="number" id="equipment-av" class="budget-input" placeholder="0.00" min="0" step="0.01">
+                                    </div>
+                                    <div class="form-row">
+                                        <label for="equipment-other">Other Supplies:</label>
+                                        <input type="number" id="equipment-other" class="budget-input" placeholder="0.00" min="0" step="0.01">
+                                    </div>
+                                </div>
+
+                                <div class="budget-category">
+                                    <h4>Miscellaneous</h4>
+                                    <div class="form-row">
+                                        <label for="misc-permits">Permits & Fees:</label>
+                                        <input type="number" id="misc-permits" class="budget-input" placeholder="0.00" min="0" step="0.01">
+                                    </div>
+                                    <div class="form-row">
+                                        <label for="misc-contingency">Contingency (10%):</label>
+                                        <input type="number" id="misc-contingency" class="budget-input" placeholder="0.00" min="0" step="0.01" readonly>
+                                    </div>
+                                    <div class="form-row">
+                                        <label for="misc-other">Other Expenses:</label>
+                                        <input type="number" id="misc-other" class="budget-input" placeholder="0.00" min="0" step="0.01">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Budget Summary -->
+                            <div class="budget-summary">
+                                <h3>Budget Summary</h3>
+                                <div class="summary-row">
+                                    <span class="summary-label">Venue Total:</span>
+                                    <span id="venue-total" class="summary-value">$0.00</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span class="summary-label">Catering Total:</span>
+                                    <span id="catering-total" class="summary-value">$0.00</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span class="summary-label">Security Total:</span>
+                                    <span id="security-total" class="summary-value">$0.00</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span class="summary-label">Marketing Total:</span>
+                                    <span id="marketing-total" class="summary-value">$0.00</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span class="summary-label">Equipment Total:</span>
+                                    <span id="equipment-total" class="summary-value">$0.00</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span class="summary-label">Miscellaneous Total:</span>
+                                    <span id="misc-total" class="summary-value">$0.00</span>
+                                </div>
+                                <div class="summary-row total-row">
+                                    <span class="summary-label">Grand Total:</span>
+                                    <span id="grand-total" class="summary-value">$0.00</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span class="summary-label">Per Person Cost:</span>
+                                    <span id="per-person-cost" class="summary-value">$0.00</span>
+                                </div>
+                            </div>
+
+                            <!-- Action Buttons -->
+                            <div class="calculator-actions">
+                                <button id="export-excel" class="btn btn-primary">Export to Excel</button>
+                                <button id="save-budget" class="btn btn-secondary">Save Budget</button>
+                                <button id="clear-budget" class="btn btn-outline">Clear All</button>
+                            </div>
+                        </div>
+
+                        <!-- Budget Visualization -->
+                        <div class="budget-chart">
+                            <canvas id="budget-pie-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Builder Section -->
+                <div id="timeline" class="timeline-container">
+                    <h2 class="section-title">Event Timeline & Checklist Builder</h2>
+                    <p class="timeline-intro">Create a customized timeline for your event planning process.</p>
+
+                    <div id="timeline-builder" class="timeline-builder">
+                        <div class="timeline-controls">
+                            <button id="add-task" class="btn btn-gold">+ Add Task</button>
+                            <button id="export-timeline" class="btn btn-primary">Export Timeline to Excel</button>
+                        </div>
+
+                        <div id="timeline-tasks" class="timeline-tasks">
+                            <!-- Tasks will be added dynamically -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Best Practices Section -->
+                <div class="best-practices-section">
+                    <h2 class="section-title">Event Budgeting Best Practices</h2>
+
+                    <div class="practices-grid">
+                        <div class="practice-card">
+                            <h3>Start Early</h3>
+                            <p>Begin budget planning as soon as you decide to host an event. Early planning allows you to identify funding sources and make informed decisions about event scope.</p>
+                        </div>
+
+                        <div class="practice-card">
+                            <h3>Include Contingency</h3>
+                            <p>Always add a contingency fund of 10-15% of your total budget to cover unexpected expenses. Our calculator automatically calculates 10% contingency.</p>
+                        </div>
+
+                        <div class="practice-card">
+                            <h3>Get Multiple Quotes</h3>
+                            <p>Obtain quotes from at least three vendors for major expenses like catering and equipment rental. This ensures competitive pricing.</p>
+                        </div>
+
+                        <div class="practice-card">
+                            <h3>Track Everything</h3>
+                            <p>Keep detailed records of all expenses, quotes, and invoices. Use our Excel export feature to maintain organized budget documentation.</p>
+                        </div>
+
+                        <div class="practice-card">
+                            <h3>Prioritize Expenses</h3>
+                            <p>Identify must-have versus nice-to-have items. Focus your budget on elements that directly impact the event's core objectives.</p>
+                        </div>
+
+                        <div class="practice-card">
+                            <h3>Review Regularly</h3>
+                            <p>Monitor your budget throughout the planning process. Regular reviews help you stay on track and make adjustments as needed.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sample Budgets -->
+                <div class="sample-budgets">
+                    <h2 class="section-title">Sample Event Budgets</h2>
+
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <button class="accordion-header">Small Event (50-100 attendees)</button>
+                            <div class="accordion-content">
+                                <ul>
+                                    <li>Venue: $500 - $1,000</li>
+                                    <li>Catering: $750 - $1,500</li>
+                                    <li>Marketing: $100 - $300</li>
+                                    <li>Equipment: $200 - $400</li>
+                                    <li>Contingency: $155 - $320</li>
+                                    <li><strong>Total: $1,705 - $3,520</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <button class="accordion-header">Medium Event (100-300 attendees)</button>
+                            <div class="accordion-content">
+                                <ul>
+                                    <li>Venue: $1,500 - $3,000</li>
+                                    <li>Catering: $2,500 - $6,000</li>
+                                    <li>Security: $500 - $1,000</li>
+                                    <li>Marketing: $300 - $600</li>
+                                    <li>Equipment: $500 - $1,000</li>
+                                    <li>Contingency: $530 - $1,160</li>
+                                    <li><strong>Total: $5,830 - $12,760</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <button class="accordion-header">Large Event (300+ attendees)</button>
+                            <div class="accordion-content">
+                                <ul>
+                                    <li>Venue: $3,000 - $7,000</li>
+                                    <li>Catering: $7,500 - $20,000</li>
+                                    <li>Security: $1,000 - $2,500</li>
+                                    <li>Marketing: $1,000 - $2,000</li>
+                                    <li>Equipment: $1,500 - $3,000</li>
+                                    <li>Contingency: $1,400 - $3,450</li>
+                                    <li><strong>Total: $15,400 - $37,950</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>UCF Event Planning</h3>
+                <p>Comprehensive guidelines for planning successful events at the University of Central Florida</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="https://www.ucf.edu/" target="_blank">UCF Home</a></li>
+                    <li><a href="https://events.ucf.edu/" target="_blank">Campus Events</a></li>
+                    <li><a href="https://ucfknights.com/all-sports-schedule" target="_blank">Athletics Calendar</a></li>
+                    <li><a href="https://www.ucf.edu/brand/" target="_blank">Brand Standards</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul class="footer-links">
+                    <li><a href="https://parking.ucf.edu/" target="_blank">Parking Services</a></li>
+                    <li><a href="https://police.ucf.edu/" target="_blank">UCF Police</a></li>
+                    <li><a href="https://risk.ucf.edu/event-safety/" target="_blank">Event Safety</a></li>
+                    <li><a href="https://ucf.mydininghub.com/en/catering" target="_blank">Catering Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>For questions about event planning at UCF, contact your department or college event coordinator.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 University of Central Florida. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/budget-calculator.js"></script>
+    <script src="js/timeline-builder.js"></script>
+</body>
+</html>

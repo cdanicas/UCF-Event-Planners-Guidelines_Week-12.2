@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find lodging and hotel accommodations near UCF campuses">
+    <title>Lodging | UCF Event Planners Guidelines</title>
+    <link rel="icon" type="image/png" href="assets/images/ucf-tab-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/interactive.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="assets/images/ucf-logo.png" alt="UCF Logo" class="ucf-logo">
+                <h1 class="site-title">Event Planners Guidelines</h1>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="conflict-management.html" class="nav-link">Conflict Management</a></li>
+                    <li><a href="budgeting.html" class="nav-link">Budgeting</a></li>
+                    <li><a href="venues.html" class="nav-link">Venues</a></li>
+                    <li><a href="parking-transportation.html" class="nav-link">Parking & Transport</a></li>
+                    <li><a href="security.html" class="nav-link">Security</a></li>
+                    <li><a href="catering.html" class="nav-link">Catering</a></li>
+                    <li><a href="event-permits.html" class="nav-link">Event Permits</a></li>
+                    <li><a href="lodging.html" class="nav-link active">Lodging</a></li>
+                    <li><a href="marketing.html" class="nav-link">Marketing</a></li>
+                </ul>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+        <div class="search-container">
+            <input type="text" id="global-search" class="search-input" placeholder="Search guidelines...">
+            <button id="search-btn" class="search-btn">Search</button>
+            <div id="search-results" class="search-results hidden"></div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="page-header fade-in">
+            <div class="container">
+                <h1 class="page-title">Lodging & Accommodations</h1>
+                <p class="page-subtitle">Find hotels and accommodations near UCF campuses for your event attendees</p>
+            </div>
+        </section>
+
+        <section class="content-section slide-up">
+            <div class="container">
+                <div class="intro-box">
+                    <h2>Planning Accommodations for Your Event</h2>
+                    <p>For events with out-of-town guests, speakers, or participants, providing information about nearby lodging options is essential. This guide organizes hotel accommodations by proximity to each UCF campus location.</p>
+                </div>
+
+                <!-- Main Campus Hotels -->
+                <div class="campus-lodging-section">
+                    <h2 class="campus-title">Hotels Near UCF Main Campus</h2>
+                    <p class="campus-description">The main campus in East Orlando has numerous hotel options within a short drive, offering various price points and amenities.</p>
+
+                    <div class="hotel-grid">
+                        <div class="hotel-card placeholder">
+                            <div class="hotel-header">
+                                <h3>Hotels Near Main Campus</h3>
+                                <span class="distance-badge">2-5 miles</span>
+                            </div>
+                            <div class="hotel-content">
+                                <p class="placeholder-text">Hotel listings coming soon. Main campus area includes options along University Boulevard, Alafaya Trail, and Colonial Drive.</p>
+                                <div class="hotel-amenities">
+                                    <h4>Typical Amenities Available:</h4>
+                                    <ul>
+                                        <li>Complimentary breakfast</li>
+                                        <li>Free WiFi</li>
+                                        <li>Fitness centers</li>
+                                        <li>Business centers</li>
+                                        <li>Meeting rooms for small groups</li>
+                                        <li>Shuttle services (varies by hotel)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hotel-card placeholder">
+                            <div class="hotel-header">
+                                <h3>Extended Stay Options</h3>
+                                <span class="distance-badge">3-6 miles</span>
+                            </div>
+                            <div class="hotel-content">
+                                <p class="placeholder-text">Extended stay hotels ideal for multi-day events, conferences, or visiting faculty.</p>
+                                <div class="hotel-features">
+                                    <h4>Features:</h4>
+                                    <ul>
+                                        <li>Full kitchenettes</li>
+                                        <li>Separate living areas</li>
+                                        <li>Weekly rates available</li>
+                                        <li>Laundry facilities</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hotel-card placeholder">
+                            <div class="hotel-header">
+                                <h3>Premium Hotels</h3>
+                                <span class="distance-badge">5-10 miles</span>
+                            </div>
+                            <div class="hotel-content">
+                                <p class="placeholder-text">Upscale hotels for VIP guests, keynote speakers, or special events.</p>
+                                <div class="hotel-features">
+                                    <h4>Features:</h4>
+                                    <ul>
+                                        <li>Full-service restaurants</li>
+                                        <li>Conference facilities</li>
+                                        <li>Concierge services</li>
+                                        <li>Premium amenities</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Downtown Campus Hotels -->
+                <div class="campus-lodging-section">
+                    <h2 class="campus-title">Hotels Near UCF Downtown Campus</h2>
+                    <p class="campus-description">Downtown Orlando offers numerous hotels within walking distance or short drive of the downtown campus.</p>
+
+                    <div class="hotel-grid">
+                        <div class="hotel-card placeholder">
+                            <div class="hotel-header">
+                                <h3>Downtown Orlando Hotels</h3>
+                                <span class="distance-badge">Walking distance to 2 miles</span>
+                            </div>
+                            <div class="hotel-content">
+                                <p class="placeholder-text">Hotel listings coming soon. Downtown area provides easy access to UCF Downtown Campus, restaurants, and entertainment.</p>
+                                <div class="hotel-amenities">
+                                    <h4>Urban Amenities:</h4>
+                                    <ul>
+                                        <li>Walking distance to campus</li>
+                                        <li>Nearby restaurants and cafes</li>
+                                        <li>Public transportation access</li>
+                                        <li>Parking garages</li>
+                                        <li>Entertainment district proximity</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hotel-card placeholder">
+                            <div class="hotel-header">
+                                <h3>Business-Class Hotels</h3>
+                                <span class="distance-badge">0.5-3 miles</span>
+                            </div>
+                            <div class="hotel-content">
+                                <p class="placeholder-text">Professional accommodations ideal for academic conferences and business events.</p>
+                                <div class="hotel-features">
+                                    <h4>Features:</h4>
+                                    <ul>
+                                        <li>Meeting room facilities</li>
+                                        <li>Business centers</li>
+                                        <li>High-speed internet</li>
+                                        <li>Professional environment</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lake Nona Campus Hotels -->
+                <div class="campus-lodging-section">
+                    <h2 class="campus-title">Hotels Near UCF Lake Nona Campus</h2>
+                    <p class="campus-description">Lake Nona Medical City area offers modern hotels convenient to the medical campus and surrounding health facilities.</p>
+
+                    <div class="hotel-grid">
+                        <div class="hotel-card placeholder">
+                            <div class="hotel-header">
+                                <h3>Lake Nona Area Hotels</h3>
+                                <span class="distance-badge">1-5 miles</span>
+                            </div>
+                            <div class="hotel-content">
+                                <p class="placeholder-text">Hotel listings coming soon. Lake Nona Medical City offers modern accommodations near healthcare facilities and campus.</p>
+                                <div class="hotel-amenities">
+                                    <h4>Medical Campus Proximity:</h4>
+                                    <ul>
+                                        <li>Close to UCF College of Medicine</li>
+                                        <li>Near medical research facilities</li>
+                                        <li>Modern, recently built hotels</li>
+                                        <li>Conference-friendly amenities</li>
+                                        <li>Restaurants and shopping nearby</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hotel-card placeholder">
+                            <div class="hotel-header">
+                                <h3>Orlando Airport Area</h3>
+                                <span class="distance-badge">5-8 miles</span>
+                            </div>
+                            <div class="hotel-content">
+                                <p class="placeholder-text">Airport hotels offering convenience for flying visitors to Lake Nona campus events.</p>
+                                <div class="hotel-features">
+                                    <h4>Features:</h4>
+                                    <ul>
+                                        <li>Airport shuttle services</li>
+                                        <li>Early check-in/late checkout options</li>
+                                        <li>Park and fly packages</li>
+                                        <li>Rental car access</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rosen Campus Hotels -->
+                <div class="campus-lodging-section">
+                    <h2 class="campus-title">Hotels Near UCF Rosen College</h2>
+                    <p class="campus-description">Rosen College is located in Orlando's tourism corridor with abundant hotel options, many within walking distance.</p>
+
+                    <div class="hotel-grid">
+                        <div class="hotel-card placeholder">
+                            <div class="hotel-header">
+                                <h3>International Drive Hotels</h3>
+                                <span class="distance-badge">Walking distance to 2 miles</span>
+                            </div>
+                            <div class="hotel-content">
+                                <p class="placeholder-text">Hotel listings coming soon. International Drive area offers numerous hotels of all types, many with convention facilities.</p>
+                                <div class="hotel-amenities">
+                                    <h4>Tourism Corridor Advantages:</h4>
+                                    <ul>
+                                        <li>Walking distance to Rosen College</li>
+                                        <li>Wide range of price points</li>
+                                        <li>Large convention hotels available</li>
+                                        <li>Restaurants and entertainment nearby</li>
+                                        <li>Theme park proximity</li>
+                                        <li>Transportation options abundant</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hotel-card placeholder">
+                            <div class="hotel-header">
+                                <h3>Convention Hotels</h3>
+                                <span class="distance-badge">1-3 miles</span>
+                            </div>
+                            <div class="hotel-content">
+                                <p class="placeholder-text">Large hotels with extensive meeting and convention facilities for major events.</p>
+                                <div class="hotel-features">
+                                    <h4>Features:</h4>
+                                    <ul>
+                                        <li>Large ballrooms and meeting spaces</li>
+                                        <li>On-site catering services</li>
+                                        <li>A/V equipment available</li>
+                                        <li>Group booking coordinators</li>
+                                        <li>Extensive amenities</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Group Booking Information -->
+                <div class="booking-info-section">
+                    <h2 class="section-title">Group Booking Best Practices</h2>
+
+                    <div class="practices-grid">
+                        <div class="practice-card">
+                            <h3>Book Early</h3>
+                            <p>For large events, contact hotels 3-6 months in advance to secure room blocks at group rates. Popular dates book quickly, especially during conference seasons.</p>
+                        </div>
+
+                        <div class="practice-card">
+                            <h3>Negotiate Room Blocks</h3>
+                            <p>Hotels often provide discounted rates for blocking 10+ rooms. Negotiate rates, cutoff dates, and any complimentary rooms for event organizers.</p>
+                        </div>
+
+                        <div class="practice-card">
+                            <h3>Provide Clear Information</h3>
+                            <p>Share hotel information in your event communications early. Include booking links, group codes, rate details, and deadlines for group rates.</p>
+                        </div>
+
+                        <div class="practice-card">
+                            <h3>Consider Transportation</h3>
+                            <p>If your event hotel is not within walking distance, arrange shuttle service or provide clear directions and parking information for attendees.</p>
+                        </div>
+
+                        <div class="practice-card">
+                            <h3>Account for Special Needs</h3>
+                            <p>Ensure recommended hotels have accessible rooms, dietary accommodation options, and amenities for guests with special requirements.</p>
+                        </div>
+
+                        <div class="practice-card">
+                            <h3>Follow Up</h3>
+                            <p>Monitor room block pickup rates. Release unused rooms before the cutoff date to avoid attrition fees while ensuring adequate accommodations.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lodging Checklist -->
+                <div class="lodging-checklist">
+                    <h2 class="section-title">Lodging Planning Checklist</h2>
+
+                    <div class="checklist-box">
+                        <ul class="checklist">
+                            <li>☐ Estimate number of out-of-town attendees needing lodging</li>
+                            <li>☐ Determine appropriate hotel locations based on event venue</li>
+                            <li>☐ Identify hotels with adequate capacity</li>
+                            <li>☐ Research hotel amenities and price ranges</li>
+                            <li>☐ Contact hotels 3-6 months in advance for group rates</li>
+                            <li>☐ Negotiate room block sizes and rates</li>
+                            <li>☐ Establish booking cutoff dates</li>
+                            <li>☐ Request complimentary rooms if applicable (1 free per 50 booked)</li>
+                            <li>☐ Verify accessible room availability</li>
+                            <li>☐ Confirm hotel cancellation policies</li>
+                            <li>☐ Arrange transportation if hotel is not walkable</li>
+                            <li>☐ Include hotel information in event communications</li>
+                            <li>☐ Provide group booking codes to attendees</li>
+                            <li>☐ Monitor room block pickup</li>
+                            <li>☐ Adjust room block if needed before cutoff</li>
+                            <li>☐ Send hotel reminders as event approaches</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tips for Attendees -->
+                <div class="attendee-tips">
+                    <h2 class="section-title">Tips for Event Attendees</h2>
+
+                    <div class="tips-box">
+                        <h3>Booking Your Hotel</h3>
+                        <ul>
+                            <li><strong>Book Early:</strong> Group rates often have limited availability and cutoff dates</li>
+                            <li><strong>Use Group Codes:</strong> Always reference the event name and group code when booking</li>
+                            <li><strong>Confirm Details:</strong> Verify check-in/check-out dates, number of guests, and room type</li>
+                            <li><strong>Check Amenities:</strong> Review what's included (parking, breakfast, WiFi, etc.)</li>
+                            <li><strong>Review Cancellation Policy:</strong> Understand cancellation deadlines and potential fees</li>
+                            <li><strong>Request Accommodations:</strong> Notify the hotel of any accessibility or special needs</li>
+                            <li><strong>Save Confirmation:</strong> Keep your confirmation number and hotel contact information</li>
+                            <li><strong>Plan Transportation:</strong> Determine how you'll get from hotel to event venue</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>UCF Event Planning</h3>
+                <p>Comprehensive guidelines for planning successful events at the University of Central Florida</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="https://www.ucf.edu/" target="_blank">UCF Home</a></li>
+                    <li><a href="https://events.ucf.edu/" target="_blank">Campus Events</a></li>
+                    <li><a href="https://ucfknights.com/all-sports-schedule" target="_blank">Athletics Calendar</a></li>
+                    <li><a href="https://www.ucf.edu/brand/" target="_blank">Brand Standards</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul class="footer-links">
+                    <li><a href="https://parking.ucf.edu/" target="_blank">Parking Services</a></li>
+                    <li><a href="https://police.ucf.edu/" target="_blank">UCF Police</a></li>
+                    <li><a href="https://risk.ucf.edu/event-safety/" target="_blank">Event Safety</a></li>
+                    <li><a href="https://ucf.mydininghub.com/en/catering" target="_blank">Catering Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>For questions about event planning at UCF, contact your department or college event coordinator.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 University of Central Florida. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

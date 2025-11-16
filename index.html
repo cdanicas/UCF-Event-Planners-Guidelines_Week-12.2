@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UCF Event Planners Guidelines - Comprehensive guide for planning events at the University of Central Florida">
+    <title>UCF Event Planners Guidelines | Home</title>
+    <link rel="icon" type="image/png" href="assets/images/ucf-tab-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/interactive.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="assets/images/ucf-logo.png" alt="UCF Logo" class="ucf-logo">
+                <h1 class="site-title">Event Planners Guidelines</h1>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="conflict-management.html" class="nav-link">Conflict Management</a></li>
+                    <li><a href="budgeting.html" class="nav-link">Budgeting</a></li>
+                    <li><a href="venues.html" class="nav-link">Venues</a></li>
+                    <li><a href="parking-transportation.html" class="nav-link">Parking & Transport</a></li>
+                    <li><a href="security.html" class="nav-link">Security</a></li>
+                    <li><a href="catering.html" class="nav-link">Catering</a></li>
+                    <li><a href="event-permits.html" class="nav-link">Event Permits</a></li>
+                    <li><a href="lodging.html" class="nav-link">Lodging</a></li>
+                    <li><a href="marketing.html" class="nav-link">Marketing</a></li>
+                </ul>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+        <div class="search-container">
+            <input type="text" id="global-search" class="search-input" placeholder="Search guidelines...">
+            <button id="search-btn" class="search-btn">Search</button>
+            <div id="search-results" class="search-results hidden"></div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section fade-in">
+            <div class="hero-content">
+                <h1 class="hero-title">Welcome to UCF Event Planners Guidelines</h1>
+                <p class="hero-subtitle">Your comprehensive resource for planning successful events at the University of Central Florida</p>
+                <div class="hero-cta">
+                    <a href="#quick-links" class="btn btn-primary">Get Started</a>
+                    <a href="https://www.ucf.edu/" target="_blank" class="btn btn-secondary">Visit UCF</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Links Section -->
+        <section id="quick-links" class="quick-links-section slide-up">
+            <div class="container">
+                <h2 class="section-title">Planning Resources</h2>
+                <div class="cards-grid">
+                    <a href="conflict-management.html" class="resource-card">
+                        <div class="card-icon">📅</div>
+                        <h3>Conflict Management</h3>
+                        <p>Check event calendars and avoid scheduling conflicts</p>
+                    </a>
+                    <a href="budgeting.html" class="resource-card">
+                        <div class="card-icon">💰</div>
+                        <h3>Budgeting</h3>
+                        <p>Plan your event budget with our interactive calculator</p>
+                    </a>
+                    <a href="venues.html" class="resource-card">
+                        <div class="card-icon">🏛️</div>
+                        <h3>Venues</h3>
+                        <p>Explore available venues across all UCF campuses</p>
+                    </a>
+                    <a href="parking-transportation.html" class="resource-card">
+                        <div class="card-icon">🚗</div>
+                        <h3>Parking & Transportation</h3>
+                        <p>Plan parking and transportation for your attendees</p>
+                    </a>
+                    <a href="security.html" class="resource-card">
+                        <div class="card-icon">🛡️</div>
+                        <h3>Security</h3>
+                        <p>Ensure safety with proper security planning</p>
+                    </a>
+                    <a href="catering.html" class="resource-card">
+                        <div class="card-icon">🍽️</div>
+                        <h3>Catering Services</h3>
+                        <p>Build your catering menu and estimate costs</p>
+                    </a>
+                    <a href="event-permits.html" class="resource-card">
+                        <div class="card-icon">📋</div>
+                        <h3>Event Permits</h3>
+                        <p>Understand and obtain necessary event permits</p>
+                    </a>
+                    <a href="lodging.html" class="resource-card">
+                        <div class="card-icon">🏨</div>
+                        <h3>Lodging</h3>
+                        <p>Find hotels near UCF campuses for your guests</p>
+                    </a>
+                    <a href="marketing.html" class="resource-card">
+                        <div class="card-icon">📢</div>
+                        <h3>Marketing</h3>
+                        <p>Promote your event following UCF brand standards</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Tools Section -->
+        <section class="featured-tools-section slide-up">
+            <div class="container">
+                <h2 class="section-title">Interactive Tools</h2>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <h3>Budget Calculator</h3>
+                        <p>Create detailed event budgets and export to Excel</p>
+                        <a href="budgeting.html" class="btn btn-gold">Start Budgeting</a>
+                    </div>
+                    <div class="tool-card">
+                        <h3>Timeline Builder</h3>
+                        <p>Build custom event timelines and checklists</p>
+                        <a href="budgeting.html#timeline" class="btn btn-gold">Create Timeline</a>
+                    </div>
+                    <div class="tool-card">
+                        <h3>Catering Menu Builder</h3>
+                        <p>Select menu items and estimate catering costs</p>
+                        <a href="catering.html" class="btn btn-gold">Build Menu</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Getting Started Guide -->
+        <section class="getting-started-section slide-up">
+            <div class="container">
+                <h2 class="section-title">Getting Started</h2>
+                <div class="steps-container">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>Check for Conflicts</h3>
+                        <p>Review campus calendars to ensure your event date doesn't conflict with major university events</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>Create Your Budget</h3>
+                        <p>Use our budget calculator to estimate costs for venue, catering, security, and more</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>Reserve Your Venue</h3>
+                        <p>Select and book an appropriate venue from our comprehensive list of campus locations</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <h3>Obtain Permits</h3>
+                        <p>Complete necessary forms and obtain required permits well in advance</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">5</div>
+                        <h3>Plan Logistics</h3>
+                        <p>Arrange catering, parking, transportation, and security for your event</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">6</div>
+                        <h3>Promote Your Event</h3>
+                        <p>Market your event using UCF brand guidelines and approved channels</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>UCF Event Planning</h3>
+                <p>Comprehensive guidelines for planning successful events at the University of Central Florida</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="https://www.ucf.edu/" target="_blank">UCF Home</a></li>
+                    <li><a href="https://events.ucf.edu/" target="_blank">Campus Events</a></li>
+                    <li><a href="https://ucfknights.com/all-sports-schedule" target="_blank">Athletics Calendar</a></li>
+                    <li><a href="https://www.ucf.edu/brand/" target="_blank">Brand Standards</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul class="footer-links">
+                    <li><a href="https://parking.ucf.edu/" target="_blank">Parking Services</a></li>
+                    <li><a href="https://police.ucf.edu/" target="_blank">UCF Police</a></li>
+                    <li><a href="https://risk.ucf.edu/event-safety/" target="_blank">Event Safety</a></li>
+                    <li><a href="https://ucf.mydininghub.com/en/catering" target="_blank">Catering Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>For questions about event planning at UCF, contact your department or college event coordinator.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 University of Central Florida. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
