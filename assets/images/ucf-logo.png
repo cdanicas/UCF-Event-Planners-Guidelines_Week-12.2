@@ -1,4 +1,13 @@
 <svg width="200" height="50" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
   <rect width="200" height="50" fill="#000000"/>
-  <text x="100" y="30" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#FFC904" text-anchor="middle">UCF</text>
+
+  <!-- UCF Text -->
+  <text x="20" y="35" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="bold" fill="#FFC904" letter-spacing="2">UCF</text>
+
+  <!-- Knight Shield Icon (simplified) -->
+  <g transform="translate(120, 10)">
+    <path d="M 15 0 L 30 10 L 30 25 Q 30 35 15 40 Q 0 35 0 25 L 0 10 Z" fill="#FFC904" stroke="#000000" stroke-width="1"/>
+    <text x="9" y="25" font-family="Arial" font-size="16" font-weight="bold" fill="#000000">K</text>
+  </g>
 </svg>
